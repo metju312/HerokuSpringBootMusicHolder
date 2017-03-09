@@ -1,0 +1,18 @@
+<h1>Your songs</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Length</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="song in songs">
+        <td> {{ song.id }}</td>
+        <td> {{ song.title }}</td>
+        <td> {{ song.length }}</td>
+    </tr>
+    </tbody>
+</table>

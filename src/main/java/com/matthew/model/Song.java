@@ -16,6 +16,13 @@ public class Song {
     @NotEmpty
     private String title;
 
+    public Song() {
+    }
+
+    public Song(String title) {
+        this.title = title;
+    }
+
     public String getTitle() {
         return title;
     }

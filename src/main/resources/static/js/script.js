@@ -9,6 +9,10 @@ var app = angular
                     templateUrl: "partial/home.html",
                     controller: "homeController"
                 })
+                .when("/dashboard", {
+                    templateUrl: "partial/dashboard.html",
+                    controller: "homeController"
+                })
                 .when("/search", {
                     templateUrl: "partial/search.html",
                     controller: "homeController"

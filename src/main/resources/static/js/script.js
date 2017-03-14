@@ -5,16 +5,16 @@ var app = angular
         }])
         .config(["$routeProvider", function($routeProvider){
             $routeProvider
-                .when("/home", {
+                .when("/", {
                     templateUrl: "partial/home.html",
                     controller: "homeController"
                 })
                 .when("/dashboard", {
-                    templateUrl: "partial/dashboard.html",
+                    templateUrl: "/partial/dashboard.html",
                     controller: "homeController"
                 })
                 .when("/search", {
-                    templateUrl: "partial/search.html",
+                    templateUrl: "/partial/search.html",
                     controller: "homeController"
                 })
                 .when("/songs", {
@@ -22,16 +22,13 @@ var app = angular
                     controller: "songsController"
                 })
                 .when("/playlists", {
-                    templateUrl: "partial/playlists.html",
+                    templateUrl: "/partial/playlists.html",
                     controller: "songsController"
                 })
                 .when("/login", {
-                    templateUrl: "partial/login.html",
+                    templateUrl: "/partial/login.html",
                     controller: "songsController"
                 })
-                // .otherwise({
-                //     redirectTo: "/index"
-                // })
         }])
         .controller("homeController", function ($scope, $http, $log, $location, $anchorScroll){
 
@@ -53,3 +50,9 @@ var app = angular
                 $anchorScroll();
             }
         });
+
+$(document).ready(function () {
+    $('[data-toggle="offcanvas"]').click(function () {
+        $('#side-menu').toggleClass('hidden-xs')
+    })
+});

@@ -56,3 +56,12 @@ $(document).ready(function () {
         $('#side-menu').toggleClass('hidden-xs')
     })
 });
+
+$(function() {
+    $("#link-list li").click(function () {
+        if ( $("#link-list li").hasClass("active") ) {
+            $("#link-list li").removeClass("active");
+        }
+        $(this).addClass("active");
+    });
+});

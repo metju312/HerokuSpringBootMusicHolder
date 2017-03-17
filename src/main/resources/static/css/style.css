@@ -8,6 +8,7 @@
     --green-label-color: #1AB394;
     --background-color: #F3F3F4;
     --text-color: #676A6C;
+    --text-color: #676A6C;
     --text-white-color: #d4d7d9;
     --black-color: #0A0A0A;
     --link-active-color: #1a1a1a;
@@ -17,10 +18,18 @@
     --gray-line-color: #E7EAEC;
     --top-border-color: #E7EAEC;
     --bottom-border-color: #F#F#F4;
+
+    /*background*/
+    --background-dark-color: #1A1A1A;
+    --background-normal-color: #212121;
+    --background-light-color: #262626;
+    --background-active-color: #232323;
+    --background-border-color: #171717;
+
 }
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: var(--background-color);
+    background-color: var(--background-normal-color);
     color: var(--text-color);
     height: 100%;
 }
@@ -30,9 +39,10 @@ body {
 .logo {
     float: left;
     padding-top: 10px;
-    padding-left: 25px;
+    padding-left: 24px;
+    padding-bottom: 10px;
     margin: 0;
-    font-size: 18px;
+    font-size: 23px;
     color: var(--white-color);
     text-decoration: none;
 }
@@ -40,8 +50,15 @@ body {
     font-weight: 300;
     color: var(--primary-color);
 }
+.logo-row{
+    border-bottom: 1px solid var(--background-light-color);
+}
+.logo:hover, .logo:visited, .logo:active, .logo:link{
+    text-decoration: none;
+    color: var(--white-color);
+}
 .side-menu{
-    background-color: var(--gray-color);
+    background-color: var(--background-dark-color);
     padding: 0px;
     margin: 0px;
 }
@@ -52,8 +69,9 @@ body {
 }
 .side-menu .link a{
     padding: 12px 20px;
+    padding-left: 24px;
     text-decoration: none;
-    color: var(--text-white-color);
+    color: var(--text-color);
     font-weight: bold;
     font-size: 13px;
     display: block;
@@ -62,13 +80,15 @@ body {
     margin-right: 6px;
 }
 .side-menu .link a:hover{
-    background-color: var(--gray-hover-color);
+    background-color: var(--background-active-color);
     color: var(--white-color);
     display: block;
 }
 .side-menu .active a{
     color: var(--white-color);
-    background-color: var(--link-active-color);
+    background-color: var(--background-active-color);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 20px;
 }
 .side-menu .collapseable li {
     padding-left: 20px;
@@ -81,7 +101,7 @@ body {
     display: block;
 }
 .side-menu .collapseable{
-    border-left: 4px solid var(--primary-color);
+    /*border-left: 4px solid var(--primary-active-color);*/
     background-color: var(--gray-hover-color);
 }
 .side-menu .link > ul > li {
@@ -107,8 +127,8 @@ body {
     vertical-align: top;
 }
 .nav-header {
-    background-color: var(--white-color);
-    border-bottom: 1px solid var(--gray-line-color)
+    background-color: var(--background-dark-color);
+    border-bottom: 1px solid var(--background-light-color)
 }
 .nav-header .header-search-field{
     padding-top: 17px;
@@ -116,6 +136,7 @@ body {
     border: none;
     width: 300px;
     outline: none;
+    background-color: var(--background-dark-color);
 }
 .nav-header ul{
     margin: 0px;
@@ -158,10 +179,11 @@ body {
     position: absolute;
     width: 100%;
     bottom: 0px;
-    background-color: var(--white-color);
+    background-color: var(--background-dark-color);
     padding: 10px;
     font-size: 12px;
     color: var(--text-color);
+    border-left: 1px solid var(--background-normal-color)
 }
 .navbar-default{
     background-color: var(--white-color);
@@ -182,21 +204,18 @@ body {
     background-color: var(--primary-color);
 }
 .content{
-    margin: 20px 14px 50px 14px;
-    background-color: var(--white-color);
-    border-top: 4px var(--top-border-color) solid;
+    /*margin: 40px 14px 50px 14px;*/
+    padding: 14px 40px 14px 40px;
+    background-color: var(--background-normal-color);
 }
 .content header{
     border-bottom: 1px var(--bottom-border-color) solid;
-    padding: 10px 20px;
+    padding-bottom: 10px;
 }
 .page_title{
     font-size: 14px;
     font-weight: bold;
     margin: 0px;
-}
-.content-inner{
-    padding: 20px;
 }
 .search-field{
     height: 31px;
@@ -252,4 +271,16 @@ body {
 }
 .pagination a{
     color: var(--primary-color) !important;
+}
+.title-content{
+    background-color: var(--background-light-color);
+    display: block;
+}
+.title-content h2{
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    color: var(--white-color);
+    font-size: 20px;
 }
